@@ -1,0 +1,26 @@
+#!/bin/sh
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+userRepo=$(git remote show origin -n | ruby -ne 'puts /^\s*Fetch.*(:|\/){1}([^\/]+\/[^\/]+).git/.match($_)[2] rescue nil')
+templateFromBranch=$(echo $branch | cut -d'/' -f1)
+compareToMainUrl="https://github.com/$userRepo/compare/$branch?expand=1"
+templatePath=".github/PULL_REQUEST_TEMPLATE/$templateFromBranch.md"
+
+echo "branch: $branch"
+echo "userRepo: $userRepo"
+echo "templateFromBranch $templateFromBranch"
+echo "compareToMainUrl: $compareToMainUrl"
+echo "templatePath: $templatePath"
+
+if [ -n "$userRepo" ]
+then 
+    echo ""
+    echo "Compare changes in '$branch' on GitHub by visiting:"
+    if [ -f $templatePath ]
+    then
+        echo "     $compareToMainUrl&template=$templateFromBranch.md"
+    else
+        echo "     $compareToMainUrl"
+    fi
+    echo ""
+fi
