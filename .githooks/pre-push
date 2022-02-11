@@ -4,15 +4,13 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 userRepo=$(git remote show origin -n | ruby -ne 'puts /^\s*Fetch.*(:|\/){1}([^\/]+\/[^\/]+).git/.match($_)[2] rescue nil')
 templateFromBranch=$(echo $branch | cut -d'/' -f1)
 pullRequestUrl="https://github.com/$userRepo/pull/new/$branch"
-if [ -f ".github/PULL_REQUEST_TEMPLATE/$templateFromBranch.md" ]
-then
-   pullRequestUrl="$pullRequestUrl?template=$templateFromBranch"
-fi
+templatePath=".github/PULL_REQUEST_TEMPLATE/$templateFromBranch.md"
 
 echo "branch: $branch"
 echo "userRepo: $userRepo"
 echo "templateFromBranch $templateFromBranch"
 echo "pullRequestUrl: $pullRequestUrl"
+echo "templatePath: $templatePath"
 
 git ls-remote --heads origin $branch | grep $branch >/dev/null 
 if [ "$?" == "1" ]
@@ -21,7 +19,7 @@ then
     then
         echo ""
         echo "Create a pull request for '$branch' on GitHub by visiting:"
-        if [ -f ".github/PULL_REQUEST_TEMPLATE/$templateFromBranch.md" ]
+        if [ -f $templatePath ]
         then
             echo "     $pullRequestUrl?template=$templateFromBranch"
         else
