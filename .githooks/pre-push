@@ -21,7 +21,12 @@ then
     then
         echo ""
         echo "Create a pull request for '$branch' on GitHub by visiting:"
-        echo "     $pullRequestUrl"
+        if [ -f ".github/PULL_REQUEST_TEMPLATE/$templateFromBranch.md" ]
+        then
+            echo "     $pullRequestUrl?template=$templateFromBranch"
+        else
+            echo "     $pullRequestUrl"
+        fi
         echo ""
     fi
 fi
