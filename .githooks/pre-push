@@ -6,9 +6,13 @@ userRepo=$(git remote show origin -n | ruby -ne 'puts /^\s*Fetch.*(:|\/){1}([^\/
 echo "branch: $branch"
 echo "userRepo: $userRepo"
 
-if [ -n "$userRepo" ]
-then
-    echo ""
-    echo "Create PR at: https://github.com/$userRepo/compare/$branch?expand=1"
-    echo ""
+git ls-remote --heads origin $branch | grep $branch >/dev/null 
+echo $?
+if [ "$?" == "1" ]
+then if [ -n "$userRepo" ]
+    then
+        echo ""
+        echo "Create PR at: https://github.com/$userRepo/compare/$branch?expand=1"
+        echo ""
+    fi
 fi
