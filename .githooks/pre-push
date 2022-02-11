@@ -14,7 +14,7 @@ echo "templatePath: $templatePath"
 
 if [ -n "$userRepo" ]
 then 
-    echo "Branch $branch exists in origin."
+    echo ""
     echo "Compare changes in '$branch' on GitHub by visiting:"
     if [ -f $templatePath ]
     then
