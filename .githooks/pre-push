@@ -9,6 +9,6 @@ echo "userRepo: $userRepo"
 if [ -n "$userRepo" ]
 then
     echo ""
-    echo "Create PR at: https://github.com/$userRepo/compare/$branch?expand=1"
+    echo "Create PR at: https:$userRepo/compare/$branch?expand=1"
     echo ""
 fi
