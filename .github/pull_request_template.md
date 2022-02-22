@@ -1,9 +1,9 @@
-**This PR resolves:** [JB-xxx](https://avabank.atlassian.net/browse/JB-xxx)
+**This PR resolves:** [JB-xxx](https://your-jira.atlassian.net/browse/JB-xxx)
 
 **Integration PR:**
 
-- Fixes #****
-- Fixes #****
+- Fixes #\*\*\*\*
+- Fixes #\*\*\*\*
 
 # Description
 
@@ -11,15 +11,15 @@
 
 ## Context & Motivation
 
- - What is the motivation for this ticket?
+- What is the motivation for this ticket?
 
 ## Technical overview
 
- - Further detail of technical decisions/changes as required
+- Further detail of technical decisions/changes as required
 
 ## Out of scope
 
-- Short description of related ticket : [JB-xxx](https://avabank.atlassian.net/browse/JB-xxx)
+- Short description of related ticket : [JB-xxx](https://your-jira.atlassian.net/browse/JB-xxx)
 
 # How to test
 

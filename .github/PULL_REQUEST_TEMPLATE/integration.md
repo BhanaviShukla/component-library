@@ -1,9 +1,9 @@
-**Feature:** [JB-xxx](https://avabank.atlassian.net/browse/JB-xxx)
+**Feature:** [JB-xxx](https://your-jira.atlassian.net/browse/JB-xxx)
 
 **Integration PRs:**
 
-- Fixes #****
-- Fixes #****
+- Fixes #\*\*\*\*
+- Fixes #\*\*\*\*
 
 # Description
 
@@ -11,7 +11,7 @@
 
 ## Out of scope
 
-- Short description of related ticket : [JB-xxx](https://avabank.atlassian.net/browse/JB-xxx)
+- Short description of related ticket : [JB-xxx](https://your-jira.atlassian.net/browse/JB-xxx)
 
 # How to test
 

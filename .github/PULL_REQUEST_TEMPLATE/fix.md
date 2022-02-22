@@ -1,4 +1,4 @@
-**This PR fixes:** [JB-xxx](https://avabank.atlassian.net/browse/JB-xxx)
+**This PR fixes:** [JB-xxx](https://your-jira.atlassian.net/browse/JB-xxx)
 
 # Description
 

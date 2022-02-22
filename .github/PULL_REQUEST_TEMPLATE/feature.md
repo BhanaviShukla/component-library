@@ -1,4 +1,4 @@
-**This PR resolves:** [JB-xxx](https://avabank.atlassian.net/browse/JB-xxx)
+**This PR resolves:** [JB-xxx](https://your-jira.atlassian.net/browse/JB-xxx)
 
 # Description
 
@@ -14,7 +14,7 @@
 
 ## Out of scope
 
-- Short description of related ticket : [JB-xxx](https://avabank.atlassian.net/browse/JB-xxx)
+- Short description of related ticket : [JB-xxx](https://your-jira.atlassian.net/browse/JB-xxx)
 
 # How to test
 
