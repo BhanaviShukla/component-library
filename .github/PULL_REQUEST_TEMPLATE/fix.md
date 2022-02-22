@@ -8,13 +8,13 @@
 
 - What fixed the issue.
 
-# How to test
-
-1. Step by step guide
-2. How to test this fix
-3. Please provide information about users to test with where relevant
-
 # Screen capture
+
+## Before
+
+_[Paste related screenshots or recordings here]_
+
+## After
 
 _[Paste related screenshots or recordings here]_
 
